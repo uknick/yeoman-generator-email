@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+<style>
+	table { border:1px solid red;}
+</style>
+
+<% if (includeCss){  %>
+<style>
+	body { padding:0; margin:0; }
+	#outlook a{padding:0;}     /* Force Outlook to provide a "view in browser" button. */
+	body{width:100% !important;} .ReadMsgBody{width:100%;} .ExternalClass{width:100%;}  /* Force Hotmail to display emails at full width */
+	body{-webkit-text-size-adjust:none; -ms-text-size-adjust:none;}      /* Prevent Webkit and Windows Mobile platforms from changing default font sizes. */
+</style>
+<% }  %>
+
+
+
+</head>
+<body>
+
+<% if (emailWidth > 800){  %>
+	more than 800
+<% } else {  %>
+	less than 800
+<% }  %>
+
+
+
+<h1><%= projectName %></h1>
+
+
+<table border="0" width="<%= emailWidth %>" cellpadding="0" cellspacing="0" align="center">
+	<tr>
+		<td>test</td>
+	</tr>
+</table>
+
+
+	
+</body>
+</html>
